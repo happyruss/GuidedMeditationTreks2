@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Guided Meditation Treks 2</string>
+    <string name="action_settings">Settings</string>
+    <string name="gmt">Guided Meditation Treks</string>
+    <string name="url">http://www.guidedmeditationtreks.com/v1.html</string>
+    <string name="app_label">Meditate</string>
+    <string name="countdown"> </string>
+</resources>

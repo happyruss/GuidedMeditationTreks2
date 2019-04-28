@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:background="@layout/background_image"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/screen_main">
+
+    <TextView
+        android:id="@+id/gmtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gmt"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+            <Button
+                android:id="@+id/btClearDrama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cleanse A\nDrama Cycle"
+                android:onClick="queueMeditation"
+                android:gravity="center"
+                />
+
+            <Button
+                android:id="@+id/btAskSelf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ask Your\nHigher Self\nA Question"
+                android:onClick="queueMeditation"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+            <Button
+                android:id="@+id/btCrystal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Program a\nQuartz Crystal"
+                android:onClick="queueMeditation"
+                android:gravity="center"
+                />
+
+            <Button
+                android:id="@+id/btHelpAnother"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help Another\nBy Thought"
+                android:onClick="queueMeditation"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            >
+        </RelativeLayout>
+
+        <ToggleButton
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textOn=""
+            android:textOff=""
+            android:onClick="clickPlay"
+            android:background="@layout/button_custom"
+            android:gravity="center"
+            android:visibility="invisible"
+            />
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btSkipIntro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip Intro"
+                android:onClick="skipIntro"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voice"
+        android:layout_gravity="left">
+    </TextView>
+    <SeekBar
+        android:id="@+id/skVoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:progressDrawable="@color/gray"
+        android:max="100">
+    </SeekBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nature"
+        android:layout_gravity="left">
+    </TextView>
+    <SeekBar
+        android:id="@+id/skNature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:progressDrawable="@color/gray"
+        android:max="100">
+    </SeekBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:layout_gravity="left">
+    </TextView>
+    <SeekBar
+        android:id="@+id/skMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:progressDrawable="@color/gray"
+        android:max="100">
+    </SeekBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tones"
+        android:layout_gravity="left">
+    </TextView>
+    <SeekBar
+        android:id="@+id/skTones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:progressDrawable="@color/gray"
+        android:max="100">
+    </SeekBar>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33">
+
+            <ToggleButton
+                android:id="@+id/tgTones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Noise"
+                android:textOff="Binaural"
+                android:textOn="Isochronic"
+                android:onClick="clickTones"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:shadowColor="@color/white"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="25"
+            />
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate App"
+                android:onClick="rateApp"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
